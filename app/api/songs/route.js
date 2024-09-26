@@ -1,14 +1,28 @@
 import { NextResponse } from "next/server";
 import { pool } from "../../../lib/db"; // Using db utility for PostgreSQL
 
-// Handle GET requests
+// // Handle GET requests
+// export async function GET() {
+//   try {
+//     const result = await pool.query("SELECT * FROM songs");
+//     return NextResponse.json(result.rows);
+//   } catch (error) {
+//     console.error("Error fetching songs:", error);
+//     return NextResponse.error();
+//   }
+// }
+
+// GET request to fetch all songs
 export async function GET() {
   try {
-    const result = await pool.query("SELECT * FROM songs");
-    return NextResponse.json(result.rows);
+    const result = await pool.query("SELECT * FROM songs"); // Fetch all songs from the database
+    return NextResponse.json(result.rows); // Return the result as JSON
   } catch (error) {
     console.error("Error fetching songs:", error);
-    return NextResponse.error();
+    return NextResponse.json(
+      { error: "Failed to fetch songs" },
+      { status: 500 }
+    );
   }
 }
 

@@ -6,19 +6,14 @@ DROP TABLE IF EXISTS songs;
 
 CREATE TABLE songs (
   id SERIAL PRIMARY KEY,
-  title VARCHAR(255) NOT NULL,
-  year INT,
-  genre VARCHAR(100),
-  watched BOOLEAN DEFAULT FALSE
+  title TEXT NOT NULL DEFAULT '',
+  instrument TEXT NOT NULL DEFAULT '',
+  artist TEXT NOT NULL DEFAULT '',
+  pdf TEXT NOT NULL DEFAULT ''
 );
 
 -- Insert sample data (optional)
-INSERT INTO songs (title, year, genre, watched) VALUES
-('Inception', 2010, 'Sci-Fi', false),
-('The Dark Knight', 2008, 'Action', true),
-('Interstellar', 2014, 'Sci-Fi', true),
-('Mean Girls', 2024, 'Comedy', false),
-('Hackers', 1995, 'Crime-Thriller', false),
-('The Grey', 2011, 'Survival-Thriller', false),
-('Sunshine', 2007, 'Sci-Fi', false),
-('Ex Machina', 2014, 'Sci-Fi', false);
+INSERT INTO songs (title, instrument, artist, pdf) VALUES
+('I Wanna Hold Your Hand', 'Drums', 'The Beatles', 'https://drive.google.com/file/d/1pTYWPnwRnh2rUBPfOQTWuXUhQuuE1LBZ/view?usp=sharing'),
+('I Dont Wanna Hear It', 'Drums', 'Minor Threat', 'https://drive.google.com/file/d/1-xnVv5xNG5-QHjhIGFbO2E4puUxDjRf4/view?usp=sharing'),
+('Another One Bites the Dust', 'Bass-tab-score', 'Queen', 'https://drive.google.com/file/d/1hTfb9BEZqTw8t7hzKQPTFI1-8Kjxsbm9/view?usp=sharing');
