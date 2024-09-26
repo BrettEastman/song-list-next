@@ -1,17 +1,12 @@
-import localFont from "next/font/local";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+import { Lexend_Deca } from "next/font/google";
+
+export const lexend_deca = Lexend_Deca({
+  subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata = {
@@ -22,11 +17,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={lexend_deca.className}>
         <Header />
-        {children}
+        <div className="h-screen">{children}</div>
         <Footer />
       </body>
     </html>

@@ -5,7 +5,7 @@ import linkedInIcon from "../../public/icons/linkedin-rounded-svgrepo-com.svg";
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col gap-4 text-lg">
+    <footer className="flex flex-col gap-4 text-sm border-t-2 border-black">
       <div className="flex gap-4">
         <a
           rel="noreferrer"
