@@ -11,10 +11,10 @@ export default function Home() {
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
-        return response.json(); // Parse the JSON response
+        return response.json();
       })
       .then((data) => {
-        setSongs(data); // Set the song data to state
+        setSongs(data);
         console.log("data", data);
       })
       .catch((error) => {
@@ -23,8 +23,10 @@ export default function Home() {
   }, []);
 
   return (
-    <div>
-      <h1 className="text-2xl">Song List</h1>
+    <div className="grid place-items-center pt-8">
+      <h2 className="text-2xl py-8">Add song here:</h2>
+      <AddSongForm />
+      <h2 className="text-2xl py-8">Current song list:</h2>
       <ul>
         {songs.map((song) => (
           <li key={song.id}>
@@ -32,7 +34,6 @@ export default function Home() {
           </li>
         ))}
       </ul>
-      <AddSongForm />
     </div>
   );
 }

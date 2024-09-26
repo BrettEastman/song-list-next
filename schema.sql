@@ -12,7 +12,7 @@ CREATE TABLE songs (
   pdf TEXT NOT NULL DEFAULT ''
 );
 
--- Insert sample data (optional)
+-- Insert sample data:
 INSERT INTO songs (title, instrument, artist, pdf) VALUES
 ('I Wanna Hold Your Hand', 'Drums', 'The Beatles', 'https://drive.google.com/file/d/1pTYWPnwRnh2rUBPfOQTWuXUhQuuE1LBZ/view?usp=sharing'),
 ('I Dont Wanna Hear It', 'Drums', 'Minor Threat', 'https://drive.google.com/file/d/1-xnVv5xNG5-QHjhIGFbO2E4puUxDjRf4/view?usp=sharing'),
