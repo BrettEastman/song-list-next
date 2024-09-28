@@ -1,0 +1,41 @@
+services:
+  db:
+    image: postgres:14
+    container_name: song_list_postgres_db
+    environment:
+      POSTGRES_USER: ${DB_USER} # This creates a user in Postgres named 'brettaustineastman' (DB_USER in .env)
+      POSTGRES_PASSWORD: ${DB_PASSWORD} # Sets the password for the user.
+      POSTGRES_DB: ${DB_NAME} # The database Postgres creates on startup
+    volumes:
+      - ./docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+    ports:
+      - "5432:5432"
+    networks:
+      - song-list-app-network
+
+  app:
+    image: node:18-alpine
+    container_name: song_list_next
+    working_dir: /app
+    environment:
+      - DB_USER=${DB_USER} # This is the same user defined by POSTGRES_USER. Same situation with password and name.
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_NAME=${DB_NAME}
+      - DB_HOST=${DB_HOST} # Refers to the Postgres service name in docker-compose
+    build:
+      context: .
+    volumes:
+      - .:/app
+    ports:
+      - "3000:3000"
+    networks:
+      - song-list-app-network
+    depends_on:
+      - db
+
+# volumes:
+#   postgres_data:
+
+networks:
+  song-list-app-network:
+    driver: bridge

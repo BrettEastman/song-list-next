@@ -1,10 +1,4 @@
-DROP DATABASE IF EXISTS songs_db;
-CREATE DATABASE songs_db;
-\c songs_db;
-
-DROP TABLE IF EXISTS songs;
-
-CREATE TABLE songs (
+CREATE TABLE if NOT EXISTS songs (
   id SERIAL PRIMARY KEY,
   title TEXT NOT NULL DEFAULT '',
   instrument TEXT NOT NULL DEFAULT '',
