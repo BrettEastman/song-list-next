@@ -3,6 +3,12 @@ import { pool } from "@/lib/db";
 
 export async function GET() {
   try {
+    const result1 = await pool.query("SELECT current_database()");
+    console.log(
+      "Connected to database in API route:",
+      result1.rows[0].current_database
+    );
+
     const result = await pool.query("SELECT * FROM songs");
     return NextResponse.json(result.rows); // Return the result as JSON
   } catch (error) {
@@ -22,6 +28,7 @@ export async function POST(req) {
       "INSERT INTO songs (title, instrument, artist, pdf) VALUES ($1, $2, $3, $4) RETURNING *",
       [title, instrument, artist, pdf]
     );
+
     return NextResponse.json(result.rows[0]);
   } catch (error) {
     console.error("Error adding song:", error);

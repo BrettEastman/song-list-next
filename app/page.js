@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import AddSongForm from "./components/AddSongForm";
+import SongDisplay from "./components/SongDisplay";
 
 export default function Home() {
   const [songs, setSongs] = useState([]);
@@ -40,10 +41,10 @@ export default function Home() {
       <h2 className="text-2xl py-8">Add song here:</h2>
       <AddSongForm addSong={addSong} />
       <h2 className="text-2xl py-8">Current song list:</h2>
-      <ul>
+      <ul className="w-1/3">
         {songs.map((song) => (
           <li key={song.id}>
-            {song.title} - {song.artist}
+            <SongDisplay song={song} />
           </li>
         ))}
       </ul>
