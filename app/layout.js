@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={lexend_deca.className}>
         <Header />
-        <div className="h-screen">{children}</div>
+        <div className="h-full">{children}</div>
         <Footer />
       </body>
     </html>

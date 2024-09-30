@@ -21,7 +21,7 @@ services:
       - DB_USER=${DB_USER} # This is the same user defined by POSTGRES_USER. Same situation with password and name.
       - DB_PASSWORD=${DB_PASSWORD}
       - DB_NAME=${DB_NAME}
-      - DB_HOST=${DB_HOST} # Refers to the Postgres service name in docker-compose
+      - DB_HOST=db # Refers to the Postgres service name in docker-compose
     build:
       context: .
     volumes:

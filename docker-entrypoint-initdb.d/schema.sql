@@ -7,7 +7,7 @@ CREATE TABLE if NOT EXISTS songs (
 );
 
 -- Insert sample data:
-INSERT INTO songs (title, instrument, artist, pdf) VALUES
-('I Wanna Hold Your Hand', 'Drums', 'The Beatles', 'https://drive.google.com/file/d/1pTYWPnwRnh2rUBPfOQTWuXUhQuuE1LBZ/view?usp=sharing'),
-('I Dont Wanna Hear It', 'Drums', 'Minor Threat', 'https://drive.google.com/file/d/1-xnVv5xNG5-QHjhIGFbO2E4puUxDjRf4/view?usp=sharing'),
-('Another One Bites the Dust', 'Bass-tab-score', 'Queen', 'https://drive.google.com/file/d/1hTfb9BEZqTw8t7hzKQPTFI1-8Kjxsbm9/view?usp=sharing');
+-- INSERT INTO songs (title, instrument, artist, pdf) VALUES
+-- ('I Wanna Hold Your Hand', 'Drums', 'The Beatles', 'https://drive.google.com/file/d/1pTYWPnwRnh2rUBPfOQTWuXUhQuuE1LBZ/view?usp=sharing'),
+-- ('I Dont Wanna Hear It', 'Drums', 'Minor Threat', 'https://drive.google.com/file/d/1-xnVv5xNG5-QHjhIGFbO2E4puUxDjRf4/view?usp=sharing'),
+-- ('Another One Bites the Dust', 'Bass-tab-score', 'Queen', 'https://drive.google.com/file/d/1hTfb9BEZqTw8t7hzKQPTFI1-8Kjxsbm9/view?usp=sharing');
