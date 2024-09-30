@@ -4,9 +4,9 @@ describe("home page check", () => {
   });
 
   it("renders default elements on the screen", () => {
-    cy.get('[data-testid="cypress-home-h2"]')
+    cy.get('[data-testid="cypress-home-h1"]')
       .should("exist")
-      .should("have.text", "Add song here:");
+      .should("have.text", "Home Page");
   });
 
   it("renders all songs in the song list", () => {
