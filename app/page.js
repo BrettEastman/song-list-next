@@ -41,9 +41,9 @@ export default function Home() {
       <h2 className="text-2xl py-8">Add song here:</h2>
       <AddSongForm addSong={addSong} />
       <h2 className="text-2xl py-8">Current song list:</h2>
-      <ul className="w-1/3">
+      <ul className="w-1/3 mb-8">
         {songs.map((song) => (
-          <li key={song.id}>
+          <li key={song.id} className="p-1">
             <SongDisplay song={song} />
           </li>
         ))}
