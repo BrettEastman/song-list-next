@@ -6,8 +6,8 @@ export default async function GuitarPage() {
 
   return (
     <div className="grid place-items-center pt-8">
-      <h1 className="text-3xl font-bold mb-8">Guitar Songs</h1>
-      <ul className="w-2/3 mb-8">
+      <h2 className="text-3xl font-bold mb-8">Guitar Songs</h2>
+      <ul className="w-1/2 mb-8">
         {songs.map((song) => (
           <li key={song.id} className="p-1">
             <SongDisplay song={song} />
