@@ -20,7 +20,7 @@ export default async function BassPage() {
   );
 }
 
-// Function to fetch bass songs from the database
+// SSR function to fetch bass songs from the database
 async function fetchBassSongs() {
   try {
     const result = await pool.query(
