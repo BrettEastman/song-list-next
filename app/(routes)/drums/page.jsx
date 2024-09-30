@@ -6,7 +6,7 @@ export default async function DrumsPage() {
 
   return (
     <div className="grid place-items-center pt-8">
-      <h1 className="text-3xl font-bold mb-8">Drums Songs</h1>
+      <h2 className="text-3xl font-bold mb-8">Drums Songs</h2>
       <ul className="w-2/3 mb-8">
         {songs.map((song) => (
           <li key={song.id} className="p-1">
