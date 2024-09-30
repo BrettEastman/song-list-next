@@ -16,7 +16,6 @@ export default function Home() {
       })
       .then((data) => {
         setSongs(data);
-        console.log("data", data);
       })
       .catch((error) => {
         console.error("Error fetching songs:", error);

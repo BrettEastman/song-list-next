@@ -18,7 +18,6 @@ export default function AddSongForm({ addSong }) {
   function handleSubmit(e) {
     e.preventDefault();
     addSong(song);
-    // console.log("song:", song);
     setSong(initialState);
   }
 
