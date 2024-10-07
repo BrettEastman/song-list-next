@@ -37,14 +37,14 @@ export default function Home() {
 
   return (
     <div className="grid place-items-center pt-8">
-      <div class="flex flex-col items-center px-2 py-4">
+      <div className="flex flex-col items-center px-2 py-4">
         <h1
-          class="text-2xl text-primary10 dark:text-primary80 font-semibold py-8"
+          className="text-2xl text-primary10 dark:text-primary80 font-semibold py-8"
           data-testid="cypress-home-h1"
         >
           Home Page
         </h1>
-        <div class="w-1/2 text-lg text-primary10 dark:text-primary80">
+        <div className="w-1/2 text-lg text-primary10 dark:text-primary80">
           <p>
             Brett Eastman is a{" "}
             <a
